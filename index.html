@@ -9,37 +9,158 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
-<body>
-  Hello world
-  <h1>Dies ist ein Test</h1>
-  <p> <span>test</span> This script places a badge on your repl's full-browser view back to your repl's cover
-    page.
-  <div>test2</div>Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!</p>
-  <div class="container">
-    <div class="notification is-primary">
-      <button class="button is-danger"> Button </button>
+<body
+  background="https://images.unsplash.com/photo-1507961455425-0caef37ef6fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-  </div>
 
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
 
-  <nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul>
-      <li><a href="#">Bulma</a></li>
-      <li><a href="#">Documentation</a></li>
-      <li><a href="#">Components</a></li>
-      <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-    </ul>
+        <a class="navbar-item">
+          Documentation
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
+  <div class="container mt-2 px-4">
+    <div class="columns">
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Dr. med. Wurst</p>
+                <p class="subtitle is-6">@rainerzufall</p>
+              </div>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <h1 class="is-size-4">
+              Tolles Bild
+            </h1>
+            <img
+              src="https://images.unsplash.com/photo-1575380591643-b2c92368dc6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1162&q=80"
+              alt="Bild">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button class="button is-success">
+          Login
+        </button>
+      </p>
+    </div>
+    <div class="notification is-danger">
+      <button class="delete"></button>
+      Anmeldung fehlgeschlagen
+    </div>
+    <script language="javascript" type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          const $notification = $delete.parentNode;
+
+          $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>
