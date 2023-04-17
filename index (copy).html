@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      height: 100%;
+    }
+
+    main {
+      background: #f0f0f0;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 25% 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 'sidebar content';
+    }
+
+    aside {
+      grid-area: sidebar;
+    }
+
+    #content {
+      grid-area: content;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: 'header' 'content' 'footer';
+    }
+
+    header {
+      grid-area: header;
+    }
+
+    #chat {
+      grid-area: content;
+    }
+
+    #chat>.card-content footer {
+      grid-area: footer;
+    }
+
+    #header-box {
+      display: flex;
+    }
+
+    #header-box>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #tmp-image {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: #aaa;
+      border: #444 1px solid;
+
+    }
+
+    .name-wrap {
+      flex-grow: 1;
+    }
+
+    .image-wrap span {
+      font-size: 2rem;
+    }
+
+    #form-wrap {
+      display: flex;
+    }
+
+    #form-wrap>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .message-wrap {
+      flex-grow: 1;
+    }
+
+    .chat-message-wrapper {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    .chat-message {
+      border-radius: .25rem;
+      max-width: 33%;
+      min-width: 100px;
+      position: relative;
+    }
+
+    .chat-message.received {
+      border: #6C8EBF 1px solid;
+      background: #DAE8FC;
+    }
+
+    .chat-message.sent {
+      border: #82B366 1px solid;
+      background: #D5E8D4;
+    }
+
+    .chat-message-content {}
+
+    .chat-message-push {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <aside class="p-5">
+      <nav class="panel has-background-white">
+
+        <a class="panel-block is-active">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Klaus Kalupke
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Günther Grass
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Dagobert Duck
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Alicia Blase
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Maximilian Grunwald
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-circle-user" aria-hidden="true"></i>
+          </span>
+          Alexander Koch
+        </a>
+      </nav>
+    </aside>
+
+    <div class="p-5" id="content">
+
+      <header class="card">
+
+        <div class="card-content" id="header-box">
+          <div class="image-wrap">
+            <span class="fa-solid fa-circle-user"></span>
+          </div>
+
+          <div class="name-wrap px-4">
+            <h1 class="is-size-4">Klaus Kalupke</h1>
+          </div>
+
+          <div class="button-wrap">
+            <button class="button is-secondary is-small">
+              <span class="fa-solid fa-gear"></span>
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+      <div class="card my-4" id="chat">
+        <div class="card-content">
+          <!-- Zellenwrapper -->
+          <div class="chat-message-wrapper">
+            <div class="chat-message received p-3">
+              <div class="has-text-right is-size-7">
+                <time>11:10 Uhr</time>
+              </div>
+              <div class="chat-message-content">
+                Für einen guten langen Text müssen Sie eine ausgearbeitetes Konzept für Ihren Text haben. Schreiben ohne
+                Plan ist viel zeitaufwendiger.
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-message-wrapper">
+            <div class="chat-message received p-3">
+              <div class="has-text-right is-size-7">
+                <time>11:10 Uhr</time>
+              </div>
+              <div class="chat-message-content">
+                Für einen guten langen Text müssen Sie eine ausgearbeitetes Konzept für Ihren Text haben. Schreiben ohne
+                Plan ist viel zeitaufwendiger.
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-message-wrapper">
+            <div class="chat-message-push"></div>
+            <div class="chat-message sent p-3">
+              <div class="has-text-right is-size-7">
+                <time>11:10 Uhr</time>
+              </div>
+              <div class="chat-message-content">
+                Für einen guten langen Text müssen Sie eine ausgearbeitetes Konzept für Ihren Text haben. Schreiben ohne
+                Plan ist viel zeitaufwendiger.
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-message-wrapper">
+            <div class="chat-message received p-3">
+              <div class="has-text-right is-size-7">
+                <time>11:10 Uhr</time>
+              </div>
+              <div class="chat-message-content">
+                Für einen guten langen Text müssen Sie eine ausgearbeitetes Konzept für Ihren Text haben. Schreiben ohne
+                Plan ist viel zeitaufwendiger.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="card my-4" id="footer">
+          <div id="form-wrap" class="card-content">
+
+            <div class="shortcut-wrap">
+              <div>
+                <button class="button is-ghost"><span class="fa-solid fa-paperclip"></button>
+                <button class="button is-ghost"><span class="fa-solid fa-microphone"></button>
+                <button class="button is-ghost"><span class="fa-solid fa-location-dot"></button>
+              </div>
+            </div>
+
+            <div class="message-wrap px-3">
+              <input class="input" placeholder="Your message" type="text" placeholder="Text input">
+            </div>
+
+            <div class="submit-wrap">
+              <button class="button is-outline is-primary"><span class="fa-solid fa-paper-plane"></span></button>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
